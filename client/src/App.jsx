@@ -1,16 +1,21 @@
-import { useState } from 'react'
 import './index.css'
-import Header from './ui/Header'
-import Footer from './ui/Footer'
-import Container from './ui/Container'
+import 'react-multi-carousel/lib/styles.css';
+
+import BannerCategories from './ui/BannerCategories'
+import HomeBanner from './ui/HomeBanner'
+import Highlights from './ui/Highlights';
+import Categories from './ui/Categories';
 
 function App() {
 
   return (
     <main>
-      <Container>
-        <p>Ecommerce demo</p>
-      </Container>
+      <BannerCategories />
+      <HomeBanner />
+      <Highlights />
+      <Categories />
+
+      
     </main>
   )
 }
