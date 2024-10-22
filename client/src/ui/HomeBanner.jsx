@@ -13,6 +13,7 @@ const HomeBanner = () => {
         />
         <div className="w-full h-full absolute top-0 left-0 bg-black/50 rounded-lg" />
       </div>
+      
       <div className="absolute inset-0 flex flex-col justify-center px-10">
         <h2 className="text-xl md:text-4xl lg:text-6xl text-whiteText font-bold">
           Mi Air Purifier

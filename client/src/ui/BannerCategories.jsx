@@ -27,7 +27,6 @@ const responsive = {
   }
 };
 
-
 const BannerCategories = () => {
 
   const [categories, setCategories] = useState([])

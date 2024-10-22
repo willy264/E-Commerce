@@ -53,6 +53,7 @@ const Header = () => {
         <Link to={"/"}>
           <img src={logo} alt="logo" className="w-44" />
         </Link>
+
         {/* SearchBar */}
         <div className="hidden md:inline-flex max-w-3xl w-full relative">
           <input 
@@ -88,6 +89,8 @@ const Header = () => {
         </div>
       </div>
 
+
+    {/* Categories and Menu */}
       <div className="w-full bg-darkText text-whiteText">
         <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
           <Menu>
