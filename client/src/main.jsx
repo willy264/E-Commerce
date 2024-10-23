@@ -23,6 +23,7 @@ import Success from "./pages/Success.jsx";
 const RouterLayout = () => {
   return (
     <Layout>
+      <ScrollRestoration />
       <Outlet />
     </Layout>
   )

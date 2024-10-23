@@ -72,7 +72,7 @@ const Pagination = () => {
         />
         <p>
           Products from {itemStart} to {Math.min(endOffset, products.length)}{" "}
-          of {products?.length}
+          of {products.length}
         </p>
       </div>
     </>

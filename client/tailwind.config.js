@@ -17,6 +17,9 @@ export default {
       flex: {
         full: "0 0 100%",
       },
+      screens: {
+        'sm': '400px',
+      }
     },
   },
   plugins: [

@@ -15,6 +15,7 @@ import Container from "./Container";
 import { Link } from 'react-router-dom';
 import { config } from '../../config';
 import { getData } from '../lib';
+import ProductCard from './ProductCard';
 
 const bottomNavigation = [
   { title: "Home", link: "/" },
@@ -37,7 +38,7 @@ const Header = () => {
       const endpoint = `${config.baseUrl}/categories`;
       try {
         const data = await getData(endpoint)
-        // console.log('data', data)
+        // console.log('data', data) 
         setCategories(data)
       } catch (error) {
         console.error('Error fetching data', error)
@@ -46,16 +47,47 @@ const Header = () => {
     fetchData()
   }, [])
 
+
+  const [products, setProducts] = useState([])
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async() => {
+      const endpoint = `${config.baseUrl}/products`;
+      try {
+        const data = await getData(endpoint)
+        // console.log('data', data)
+        setProducts(data)
+      } catch (error) {
+        console.error('Error fetching data', error)
+      }
+    }
+    fetchData()
+  }, [])
+
+  useEffect(() => {
+    const filtered = products.filter((item) => {
+      // item.name.toLowerCase().includes(searchText.toLowerCase()) // OR
+
+      const searchTextLowercase = searchText.toLowerCase()
+      const productNameLowercase = item.name.toLowerCase()
+      const matchSearchTerm = productNameLowercase.includes(searchTextLowercase)
+      return matchSearchTerm
+    });
+    setFilteredProducts(filtered);
+  }, [searchText]);
+
+
   return (
     <div className="w-full bg-whiteText md:sticky md:top-0 z-50">
-      <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0">
+      <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0 md:gap-6 gap-2">
         {/* Logo */}
         <Link to={"/"}>
           <img src={logo} alt="logo" className="w-44" />
         </Link>
 
         {/* SearchBar */}
-        <div className="hidden md:inline-flex max-w-3xl w-full relative">
+        <div className="md:inline-flex max-w-3xl w-full relative">
           <input 
             type="text" 
             onChange={(e) => setSearchText(e.target.value)}
@@ -71,10 +103,37 @@ const Header = () => {
           ) : (
             <IoSearchOutline className="absolute top-2.5 right-4 text-xl" />
           )}       
+
+
+          {/* Searched product */}
+          {searchText && (
+            <div className="absolute -left-auto top-[58px] w-fit max-sm:-left-20 max-sm:w-[300px] mx-auto max-h-[500px] px-10 max-md:px-5 py-5 bg-white z-20 overflow-y-scroll text-black shadow-lg shadow-zinc-400 scrollbar-hide rounded-b-xl">
+              {filteredProducts.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {filteredProducts.map((item) => (
+                    <ProductCard
+                      key={item._id}
+                      item={item}
+                      setSearchText={setSearchText}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="py-10 bg-gray-50 w-full flex items-center justify-center border border-gray-600 rounded-md">
+                  <p className="text-xl font-normal">
+                    Nothing matches with your search keywords{" "}
+                    <span className="underline underline-offset-2 decoration-[1px] text-red-500 font-semibold">{`(${searchText})`}</span>
+                  </p>
+                  . Please try again
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
-        {/* Menubar */}
-        <div className="flex items-center gap-x-6 text-2xl">
+
+        {/* Icons beside the search box */}
+        <div className="flex items-center md:gap-x-6 gap-x-2 text-2xl">
           <Link to={'/profile'}>
             <FiUser className="hover:text-skyText duration-200 cursor-pointer" />
           </Link>
@@ -91,7 +150,7 @@ const Header = () => {
 
 
 
-    {/* Categories uses the Menu */}
+    {/* Select categories uses the Menu */}
       <div className="w-full bg-darkText text-whiteText">
         <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
           <Menu>
@@ -129,6 +188,7 @@ const Header = () => {
             </Transition>
           </Menu>
           
+          {/* the navigation beside the select category */}
           {
             bottomNavigation.map(({title, link}) => (
               <Link to={link} key={title} className="uppercase hidden md:inline-flex text-sm font-semibold text-whiteText/90 hover:text-whiteText duration-200 relative overflow-hidden group">

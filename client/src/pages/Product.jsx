@@ -13,6 +13,7 @@ import FormattedPrice from '../ui/FormattedPrice';
 import AddToCartBtn from '../ui/AddToCartBtn';
 import { productPayment } from "../assets";
 import ProductCard from '../ui/ProductCard';
+import CategoryFilteres from '../ui/CategoryFilteres';
 
 
 
@@ -36,6 +37,7 @@ const Product = () => {
         if (id) {
           setProductData(data)
           setAllProducts([])
+          // console.log('data', data)
         } else {
           setProductData(null)
           setAllProducts(data)
@@ -61,7 +63,7 @@ const Product = () => {
     <div>
       {
         loading ? <Loading /> : <Container>
-          {!!id && productData && _.isEmpty(allProducts) ? (
+          {id && productData && _.isEmpty(allProducts) ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="flex flex-start">
                 <div>
@@ -201,14 +203,14 @@ const Product = () => {
             </div>
           ): (
             <div className="flex items-start gap-10">
-              {/* <CategoryFilters id={id} /> */}
+              <CategoryFilteres id={id} />
               <div>
                 <p className="text-4xl font-semibold mb-10 text-center">
                   Products Collection
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                   {allProducts?.map((item) => (
-                    <ProductCard item={item} key={item?._id} />
+                    <ProductCard item={item} key={item._id} />
                   ))}
                 </div>
               </div>

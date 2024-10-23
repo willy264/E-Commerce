@@ -9,7 +9,7 @@ import ProductCardSideNav from './ProductCardSideNav';
 
 
 
-const ProductCard = ({item}) => {
+const ProductCard = ({item, setSearchText}) => {
   const navigation = useNavigate()
   // from site 'headlessui
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +22,7 @@ const ProductCard = ({item}) => {
 
   const handleProduct =  () => {
     navigation(`/product/${item._id}`)
+    setSearchText && setSearchText("")
   }
 
   const percentage =  ((item.regularPrice - item.discountedPrice) / item.regularPrice) * 100;
