@@ -148,7 +148,7 @@ export const blogsData = [
     title: "iPhone 15 rear camera design will be available",
     _base: "Technology",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae minus atque ratione. Sequi eos aspernatur delectus officia nemo ipsum facere debitis fugiat eum, quod quia, eligendi nihil sapiente perferendis modi quisquam reiciendis minima esse dolorem, molestias aut? Eum, repudiandae sit ipsum officiis unde reprehenderit inventore odio doloremque recusandae nobis voluptatem ipsa atque, veritatis adipisci reiciendis.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae minus atque ratione. Sequi eos aspernatur delectus officia nemo ipsum facere debitis fugiat eum, quod quia, eligendi nihil sapiente perferendis modi quisquam reiciendis minima esse dolorem, molestias aut Eum, repudiandae sit ipsum officiis unde reprehenderit inventore odio doloremque recusandae nobis voluptatem ipsa atque, veritatis adipisci reiciendis.",
   },
   {
     _id: 4002,
@@ -156,7 +156,7 @@ export const blogsData = [
     title: "Setup your surround sound speaker",
     _base: "Samrt thing",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae minus atque ratione. Sequi eos aspernatur delectus officia nemo ipsum facere debitis fugiat eum, quod quia, eligendi nihil sapiente perferendis modi quisquam reiciendis minima esse dolorem, molestias aut? Eum, repudiandae sit ipsum officiis unde reprehenderit inventore odio doloremque recusandae nobis voluptatem ipsa atque, veritatis adipisci reiciendis.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae minus atque ratione. Sequi eos aspernatur delectus officia nemo ipsum facere debitis fugiat eum, quod quia, eligendi nihil sapiente perferendis modi quisquam reiciendis minima esse dolorem, molestias aut Eum, repudiandae sit ipsum officiis unde reprehenderit inventore odio doloremque recusandae nobis voluptatem ipsa atque, veritatis adipisci reiciendis.",
   },
   {
     _id: 4003,
@@ -164,7 +164,7 @@ export const blogsData = [
     title: "Hook up a receiver for your home theater",
     _base: "Life style",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae minus atque ratione. Sequi eos aspernatur delectus officia nemo ipsum facere debitis fugiat eum, quod quia, eligendi nihil sapiente perferendis modi quisquam reiciendis minima esse dolorem, molestias aut? Eum, repudiandae sit ipsum officiis unde reprehenderit inventore odio doloremque recusandae nobis voluptatem ipsa atque, veritatis adipisci reiciendis.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae minus atque ratione. Sequi eos aspernatur delectus officia nemo ipsum facere debitis fugiat eum, quod quia, eligendi nihil sapiente perferendis modi quisquam reiciendis minima esse dolorem, molestias aut Eum, repudiandae sit ipsum officiis unde reprehenderit inventore odio doloremque recusandae nobis voluptatem ipsa atque, veritatis adipisci reiciendis.",
   },
 ]; 
 
@@ -180,7 +180,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 600,
     discountedPrice: 580,
     quantity: 1,
@@ -192,7 +192,7 @@ export const products = [
     isStock: true,
     overView: "Blutooth Speaker",
     isNew: true,
-    _base: cat?.tvAndAudio,
+    _base: cat.tvAndAudio,
   },
   {
     _id: 2002,
@@ -205,7 +205,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 250,
     discountedPrice: 180,
     quantity: 1,
@@ -217,7 +217,7 @@ export const products = [
     isStock: true,
     overView: "Smart health watch",
     isNew: false,
-    _base: cat?.smartWatches,
+    _base: cat.smartWatches,
   },
   {
     _id: 2003,
@@ -230,7 +230,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 650,
     discountedPrice: 570,
     quantity: 1,
@@ -242,7 +242,7 @@ export const products = [
     isStock: true,
     overView: "Smart health watch",
     isNew: true,
-    _base: cat?.sportWatches,
+    _base: cat.sportWatches,
   },
   {
     _id: 2004,
@@ -255,7 +255,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 400,
     discountedPrice: 350,
     quantity: 1,
@@ -267,7 +267,7 @@ export const products = [
     isStock: false,
     overView: "Cameras & Photos",
     isNew: false,
-    _base: cat?.camerasAndPhotos,
+    _base: cat.camerasAndPhotos,
   },
   {
     _id: 2005,
@@ -280,7 +280,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 90,
     discountedPrice: 80,
     quantity: 1,
@@ -292,7 +292,7 @@ export const products = [
     isStock: true,
     overView: "Blutooth Speaker",
     isNew: true,
-    _base: cat?.tvAndAudio,
+    _base: cat.tvAndAudio,
   },
   {
     _id: 2006,
@@ -305,7 +305,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 300,
     discountedPrice: 280,
     quantity: 1,
@@ -330,7 +330,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 600,
     discountedPrice: 550,
     quantity: 1,
@@ -355,7 +355,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 1100,
     discountedPrice: 1080,
     quantity: 1,
@@ -367,7 +367,7 @@ export const products = [
     isStock: true,
     overView: "Computer Components",
     isNew: false,
-    _base: cat?.computersAndLaptop,
+    _base: cat.computersAndLaptop,
   },
   {
     _id: 2009,
@@ -380,7 +380,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 450,
     discountedPrice: 380,
     quantity: 1,
@@ -392,7 +392,7 @@ export const products = [
     isStock: true,
     overView: "Robot Clean",
     isNew: true,
-    _base: cat?.robotClean,
+    _base: cat.robotClean,
   },
   {
     _id: 2010,
@@ -405,7 +405,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 305,
     discountedPrice: 285,
     quantity: 1,
@@ -417,7 +417,7 @@ export const products = [
     isStock: true,
     overView: "Cual Sim Phones",
     isNew: true,
-    _base: cat?.cellPhones,
+    _base: cat.cellPhones,
   },
   {
     _id: 2011,
@@ -430,7 +430,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 350,
     discountedPrice: 280,
     quantity: 1,
@@ -442,7 +442,7 @@ export const products = [
     isStock: true,
     overView: "Security & Protection",
     isNew: true,
-    _base: cat?.camerasAndPhotos,
+    _base: cat.camerasAndPhotos,
   },
   {
     _id: 2012,
@@ -455,7 +455,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 150,
     discountedPrice: 80,
     quantity: 1,
@@ -467,7 +467,7 @@ export const products = [
     isStock: true,
     overView: "Power Tools",
     isNew: true,
-    _base: cat?.powerTools,
+    _base: cat.powerTools,
   },
   {
     _id: 2013,
@@ -480,7 +480,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 210,
     discountedPrice: 200,
     quantity: 1,
@@ -492,7 +492,7 @@ export const products = [
     isStock: true,
     overView: "TV Box",
     isNew: true,
-    _base: cat?.tvBox,
+    _base: cat.tvBox,
   },
   {
     _id: 2014,
@@ -505,7 +505,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 80,
     discountedPrice: 75,
     quantity: 1,
@@ -517,7 +517,7 @@ export const products = [
     isStock: true,
     overView: "Game & Video",
     isNew: true,
-    _base: cat?.gameAndVideo,
+    _base: cat.gameAndVideo,
   },
   {
     _id: 2015,
@@ -530,7 +530,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 560,
     discountedPrice: 400,
     quantity: 1,
@@ -542,7 +542,7 @@ export const products = [
     isStock: true,
     overView: "Power Tools",
     isNew: true,
-    _base: cat?.powerTools,
+    _base: cat.powerTools,
   },
   {
     _id: 2016,
@@ -555,7 +555,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 250,
     discountedPrice: 240,
     quantity: 1,
@@ -567,7 +567,7 @@ export const products = [
     isStock: true,
     overView: "Blutooth Speakers",
     isNew: true,
-    _base: cat?.tvAndAudio,
+    _base: cat.tvAndAudio,
   },
   {
     _id: 2017,
@@ -580,7 +580,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 60,
     discountedPrice: 55,
     quantity: 1,
@@ -592,7 +592,7 @@ export const products = [
     isStock: true,
     overView: "TV Box",
     isNew: true,
-    _base: cat?.tvBox,
+    _base: cat.tvBox,
   },
   {
     _id: 2018,
@@ -605,7 +605,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 350,
     discountedPrice: 330,
     quantity: 1,
@@ -617,7 +617,7 @@ export const products = [
     isStock: true,
     overView: "Tablets",
     isNew: true,
-    _base: cat?.tablets,
+    _base: cat.tablets,
   },
   {
     _id: 2019,
@@ -630,7 +630,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 120,
     discountedPrice: 100,
     quantity: 1,
@@ -642,7 +642,7 @@ export const products = [
     isStock: true,
     overView: "Bluetooth Speakers",
     isNew: true,
-    _base: cat?.tvAndAudio,
+    _base: cat.tvAndAudio,
   },
   {
     _id: 2020,
@@ -655,7 +655,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 450,
     discountedPrice: 410,
     quantity: 1,
@@ -667,7 +667,7 @@ export const products = [
     isStock: true,
     overView: "Dual Sim Phones",
     isNew: true,
-    _base: cat?.cellPhones,
+    _base: cat.cellPhones,
   },
   {
     _id: 2021,
@@ -680,7 +680,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 350,
     discountedPrice: 320,
     quantity: 1,
@@ -692,7 +692,7 @@ export const products = [
     isStock: true,
     overView: "Fitness Headphones",
     isNew: true,
-    _base: cat?.headphones,
+    _base: cat.headphones,
   },
   {
     _id: 2022,
@@ -705,7 +705,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 250,
     discountedPrice: 240,
     quantity: 1,
@@ -717,7 +717,7 @@ export const products = [
     isStock: true,
     overView: "Robot Clean",
     isNew: true,
-    _base: cat?.robotClean,
+    _base: cat.robotClean,
   },
   {
     _id: 2023,
@@ -730,7 +730,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 600,
     discountedPrice: 580,
     quantity: 1,
@@ -742,7 +742,7 @@ export const products = [
     isStock: true,
     overView: "Bluetooth Speaker",
     isNew: true,
-    _base: cat?.tvAndAudio,
+    _base: cat.tvAndAudio,
   },
   {
     _id: 2024,
@@ -755,7 +755,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 80,
     discountedPrice: 70,
     quantity: 1,
@@ -767,7 +767,7 @@ export const products = [
     isStock: true,
     overView: "MP3 Player",
     isNew: true,
-    _base: cat?.tvAndAudio,
+    _base: cat.tvAndAudio,
   },
   {
     _id: 2025,
@@ -780,7 +780,7 @@ export const products = [
       "https://i.ibb.co/pw0fGmx/gaming-Controller.webp",
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut? Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore, facilis iste obcaecati ab nesciunt ducimus quidem molestias aut Aut vitae error delectus itaque facilis obcaecati nemo dolore cumque. Blanditiis minus corrupti dignissimos, voluptas iusto, eligendi maiores doloremque aliquid mollitia in hic dolores pariatur doloribus dolorum totam. Facilis, dignissimos.",
     regularPrice: 220,
     discountedPrice: 210,
     quantity: 1,
@@ -792,6 +792,6 @@ export const products = [
     isStock: true,
     overView: "Smart Health Watch",
     isNew: true,
-    _base: cat?.smartWatches,
+    _base: cat.smartWatches,
   },
 ];

@@ -90,7 +90,8 @@ const Header = () => {
       </div>
 
 
-    {/* Categories and Menu */}
+
+    {/* Categories uses the Menu */}
       <div className="w-full bg-darkText text-whiteText">
         <Container className="py-2 max-w-4xl flex items-center gap-5 justify-between">
           <Menu>
@@ -127,6 +128,7 @@ const Header = () => {
               </MenuItems>
             </Transition>
           </Menu>
+          
           {
             bottomNavigation.map(({title, link}) => (
               <Link to={link} key={title} className="uppercase hidden md:inline-flex text-sm font-semibold text-whiteText/90 hover:text-whiteText duration-200 relative overflow-hidden group">

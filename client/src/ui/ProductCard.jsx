@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom";
+
 import { MdOutlineStarOutline } from "react-icons/md";
 import AddToCartBtn from './AddToCartBtn';
 import { Button, Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
@@ -8,6 +10,7 @@ import ProductCardSideNav from './ProductCardSideNav';
 
 
 const ProductCard = ({item}) => {
+  const navigation = useNavigate()
   // from site 'headlessui
   const [isOpen, setIsOpen] = useState(false);
   const open = () => {
@@ -17,6 +20,9 @@ const ProductCard = ({item}) => {
     setIsOpen(false);
   };
 
+  const handleProduct =  () => {
+    navigation(`/product/${item._id}`)
+  }
 
   const percentage =  ((item.regularPrice - item.discountedPrice) / item.regularPrice) * 100;
 
@@ -30,7 +36,7 @@ const ProductCard = ({item}) => {
           save {percentage.toFixed(0)}%
         </span>
         <img
-            // onClick={handleProduct}
+            onClick={handleProduct}
             src={item.images[0]}
             alt="productImage"
             className="w-full h-full rounded-md object-cover group-hover:scale-110 duration-300"
