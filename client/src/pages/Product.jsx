@@ -201,7 +201,7 @@ const Product = () => {
                 </div>                                   
               </div>
             </div>
-          ): (
+          ) : (
             <div className="flex items-start gap-10">
               <CategoryFilteres id={id} />
               <div>
@@ -209,7 +209,7 @@ const Product = () => {
                   Products Collection
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                  {allProducts?.map((item) => (
+                  {allProducts.map((item) => (
                     <ProductCard item={item} key={item._id} />
                   ))}
                 </div>

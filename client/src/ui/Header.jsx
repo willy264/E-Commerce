@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 import { config } from '../../config';
 import { getData } from '../lib';
 import ProductCard from './ProductCard';
+import { store } from '../lib/store';
 
 const bottomNavigation = [
   { title: "Home", link: "/" },
@@ -32,7 +33,6 @@ const Header = () => {
   const [searchText, setSearchText] = useState('')
 
   const [categories, setCategories] = useState([])
-
   useEffect(() => {
     const fetchData = async() => {
       const endpoint = `${config.baseUrl}/categories`;
@@ -49,8 +49,6 @@ const Header = () => {
 
 
   const [products, setProducts] = useState([])
-  const [filteredProducts, setFilteredProducts] = useState([]);
-
   useEffect(() => {
     const fetchData = async() => {
       const endpoint = `${config.baseUrl}/products`;
@@ -65,6 +63,7 @@ const Header = () => {
     fetchData()
   }, [])
 
+  const [filteredProducts, setFilteredProducts] = useState([]);
   useEffect(() => {
     const filtered = products.filter((item) => {
       // item.name.toLowerCase().includes(searchText.toLowerCase()) // OR
@@ -77,6 +76,8 @@ const Header = () => {
     setFilteredProducts(filtered);
   }, [searchText]);
 
+
+  const { cartProduct, favoriteProduct, currentUser } = store();
 
   return (
     <div className="w-full bg-whiteText md:sticky md:top-0 z-50">
@@ -143,7 +144,9 @@ const Header = () => {
           </Link>
           <Link to={'/cart'} className="relative block">
             <FiShoppingBag className="hover:text-skyText duration-200 cursor-pointer" />
-            <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">0</span>
+            <span className="inline-flex items-center justify-center bg-redText text-whiteText absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4">
+            {cartProduct.length > 0 ? cartProduct.length : "0"}
+            </span>
           </Link>
         </div>
       </div>

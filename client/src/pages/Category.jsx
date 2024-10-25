@@ -47,7 +47,7 @@ const Category = () => {
           <div className="flex items-start gap-10">
             <CategoryFilters id={id} />
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-              {products?.map((item) => (
+              {products.map((item) => (
                 <ProductCard item={item} key={item?._id} />
               ))}
             </div>

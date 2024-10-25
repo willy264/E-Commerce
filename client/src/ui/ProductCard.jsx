@@ -11,6 +11,7 @@ import ProductCardSideNav from './ProductCardSideNav';
 
 const ProductCard = ({item, setSearchText}) => {
   const navigation = useNavigate()
+  
   // from site 'headlessui
   const [isOpen, setIsOpen] = useState(false);
   const open = () => {
@@ -62,7 +63,7 @@ const ProductCard = ({item, setSearchText}) => {
         <AddToCartBtn product={item} />
       </div>
 
-      {/* from site */}
+      {/* from site modal */}
       <Transition appear show={isOpen}>
         <Dialog
           as="div"
