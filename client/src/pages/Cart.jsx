@@ -1,17 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { store } from "../lib/store";
 import Container from "../ui/Container";
 import { Link } from "react-router-dom";
 import { FaQuestionCircle } from "react-icons/fa";
 import CartProduct from "../ui/CartProduct";
-// import CheckoutBtn from "../ui/CheckoutBtn";
 import FormattedPrice from "../ui/FormattedPrice";
+import CheckoutBtn from '../ui/CheckoutBtn';
 
 
 
 
 const Cart = () => {
   const { cartProduct, currentUser } = store();
+  const [totalAmt, setTotalAmt] = useState({ regular: 0, discounted: 0 });
+
+  const shippingAmt = 25;
+  const taxAmt = 15;
+
+  useEffect(() => {
+    const totals = cartProduct.reduce(  // sum is the total of all the products in the cart, the reduce property just iterates through each product in the cartproduct and calculates the total regular and discounted price, taking into account the quantity of each product in the cart, it returns the final accumulator object which contains the total regular and discounted price
+      (sum, product) => {
+        sum.regular += product.regularPrice * product.quantity;
+        sum.discounted += product.discountedPrice * product.quantity;
+        console.log(sum, product)
+        return sum;
+      },
+      { regular: 0, discounted: 0 }
+    );
+    setTotalAmt(totals);
+  }, [cartProduct]);
 
   return (
     <Container>
@@ -40,7 +57,7 @@ const Cart = () => {
                 <div className="flex items-center justify-between">
                   <dt className="text-sm text-gray-600">Subtotal</dt>
                   <dd className="text-sm font-medium text-gray-900">
-                    {/* <FormattedPrice amount={totalAmt.regular} /> */}
+                    <FormattedPrice amount={totalAmt.regular} />
                   </dd>
                 </div>
                 <div className="flex items-center justify-between border-t border-gray-200 pt-4">
@@ -53,7 +70,7 @@ const Cart = () => {
                     />
                   </dt>
                   <dd className="text-sm font-medium text-gray-900">
-                    {/* <FormattedPrice amount={shippingAmt} /> */}
+                    <FormattedPrice amount={shippingAmt} />
                   </dd>
                 </div>
                 <div className="flex items-center justify-between border-t border-gray-200 pt-4">
@@ -66,7 +83,7 @@ const Cart = () => {
                     />
                   </dt>
                   <dd className="text-sm font-medium text-gray-900">
-                    {/* <FormattedPrice amount={taxAmt} /> */}
+                    <FormattedPrice amount={taxAmt} />
                   </dd>
                 </div>
                 <div className="flex items-center justify-between border-t border-gray-200 pt-4">
@@ -75,7 +92,7 @@ const Cart = () => {
                   </dt>
                   <dd className="text-base font-medium text-gray-500">
                     <FormattedPrice
-                      // amount={totalAmt.regular - totalAmt.discounted}
+                      amount={totalAmt.regular - totalAmt.discounted}
                     />
                   </dd>
                 </div>
@@ -85,12 +102,12 @@ const Cart = () => {
                   </dt>
                   <dd className="text-lg font-bold text-gray-900">
                     <FormattedPrice
-                      // amount={totalAmt.discounted + shippingAmt + taxAmt}
+                      amount={totalAmt.discounted + shippingAmt + taxAmt}
                     />
                   </dd>
                 </div>
               </dl>
-              {/* <CheckoutBtn products={cartProduct} /> */}
+              <CheckoutBtn products={cartProduct} />
             </section>
           </div>
         </>

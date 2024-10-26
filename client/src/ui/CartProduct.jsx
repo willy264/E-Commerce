@@ -7,13 +7,16 @@ import toast from "react-hot-toast";
 import { FaCheck } from "react-icons/fa";
 
 const CartProduct = ({ product }) => {
+
   const { removeFromCart } = store();
+
   const handleRemoveProduct = () => {
     if (product) {
       removeFromCart(product._id);
       toast.success(`${product.name.substring(0, 20)} deleted successfully!`);
     }
   };
+  
   return (
     <div className="flex py-6 sm:py-10">
       <Link to={`/product/${product._id}`}>
@@ -66,7 +69,7 @@ const CartProduct = ({ product }) => {
             You are saving{" "}
             <span className="text-sm font-semibold text-green-500">
               <FormattedPrice
-                amount={product?.regularPrice - product?.discountedPrice}
+                amount={product.regularPrice - product.discountedPrice}
               />
             </span>{" "}
             upon purchase

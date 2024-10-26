@@ -3,8 +3,9 @@ import { twMerge } from 'tailwind-merge';
 import { store } from '../lib/store';
 import toast from 'react-hot-toast';
 import { FaMinus, FaPlus } from 'react-icons/fa';
+import PriceTag from './PriceTag';
 
-const AddToCartBtn = ({className, title, product}) => {
+const AddToCartBtn = ({className, title, product, showPrice = true}) => {
 
   const newClassName = twMerge(
     "bg-[#f7f7f7] uppercase text-xs py-3 text-center rounded-full font-semibold hover:bg-black hover:text-white hover:scale-105 duration-200 cursor-pointer",
@@ -46,28 +47,36 @@ const AddToCartBtn = ({className, title, product}) => {
     }
   };
 
-  // const getRegularPrice = () => {
-  //   if (existingProduct) {
-  //     if (product) {
-  //       return product?.regularPrice * existingProduct?.quantity;
-  //     }
-  //   } else {
-  //     return product?.regularPrice;
-  //   }
-  // };
+  const getRegularPrice = () => {
+    if (existingProduct) {
+      if (product) {
+        return product.regularPrice * existingProduct.quantity;
+      }
+    } else {
+      return product.regularPrice;
+    }
+  };
 
-  // const getDiscountedPrice = () => {
-  //   if (existingProduct) {
-  //     if (product) {
-  //       return product?.discountedPrice * product?.quantity;
-  //     }
-  //   } else {
-  //     return product?.discountedPrice;
-  //   }
-  // };
+  const getDiscountedPrice = () => {
+    if (existingProduct) {
+      if (product) {
+        return product.discountedPrice * existingProduct.quantity;
+      }
+    } else {
+      return product.discountedPrice;
+    }
+  };
 
   return (
     <>
+      {showPrice && (
+        <div>
+          <PriceTag
+            regularPrice={getRegularPrice()}
+            discountedPrice={getDiscountedPrice()}
+          />
+        </div>
+      )}
       {existingProduct ? (
         <div className="flex self-center items-center justify-center gap-2">
           <button

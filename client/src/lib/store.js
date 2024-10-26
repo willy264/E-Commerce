@@ -24,7 +24,7 @@ export const store = create()(
       currentUser: null,
       isLoading: true,
       cartProduct: [],
-      favoriteProduct: [],
+      favoriteProduct:  [],
 
       getUserInfo: async (uid) => {
         if (!uid) return set({ currentUser: null, isLoading: false }); // not finding user
@@ -44,7 +44,7 @@ export const store = create()(
       addToCart: (product) => { // getting the products
         return new Promise((resolve) => {
           set((state) => {
-            // console.log(state)
+            console.log(state)
             const existingProduct = state.cartProduct.find( // if existing pdt is available in the cart 
               (p) => p._id === product._id 
             );
@@ -109,17 +109,12 @@ export const store = create()(
               (item) => item._id === product._id
             );
             return {
-              favoriteProduct: isFavorite
-                ? state.favoriteProduct.filter(
-                    (item) => item._id !== product._id
-                  )
-                : [...state.favoriteProduct, { ...product }],
+              favoriteProduct: isFavorite ? state.favoriteProduct.filter( (item) => item._id !== product._id ) : [...state.favoriteProduct, { ...product }],
             };
           });
           resolve();
         });
       },
-
       removeFromFavorite: (productId) => {
         set((state) => ({
           favoriteProduct: state.favoriteProduct.filter(
