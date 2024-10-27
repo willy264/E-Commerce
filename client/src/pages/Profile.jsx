@@ -13,7 +13,7 @@ const Profile = () => {
 
   useEffect(() => {
     const unSub = onAuthStateChanged(auth, (user) => {
-      getUserInfo(user.uid);
+      getUserInfo(user?.uid);
     });
     return () => {
       unSub();

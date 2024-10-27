@@ -5,7 +5,6 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware"; // save properties in real state, and used to getting the localstorage in browser where the firebase backend is
 import { db } from "./firebase";
 
-
 const customStorage = {
   getItem: (name) => { // getting item
     const item = localStorage.getItem(name);
@@ -19,6 +18,7 @@ const customStorage = {
   },
 };
 export const store = create()(
+
   persist(
     (set) => ({ // all default
       currentUser: null,
@@ -26,6 +26,7 @@ export const store = create()(
       cartProduct: [],
       favoriteProduct:  [],
 
+      
       getUserInfo: async (uid) => {
         if (!uid) return set({ currentUser: null, isLoading: false }); // not finding user
 
@@ -41,7 +42,7 @@ export const store = create()(
           set({ currentUser: null, isLoading: false });
         }
       },
-      addToCart: (product) => { // getting the products
+      addToCart: (product) => { // getting the products (sent as a prop)
         return new Promise((resolve) => {
           set((state) => {
             console.log(state)
@@ -56,7 +57,7 @@ export const store = create()(
                 cartProduct: state.cartProduct.map((p) =>
                   p._id === product._id
                     ? { ...p, quantity: (p.quantity || 0) + 1 } // add one
-                    : p
+                    : p 
                 )
               };
             } else {
@@ -103,13 +104,15 @@ export const store = create()(
         set({ cartProduct: [] });
       },
       addToFavorite: (product) => {
-        return new Promise((resolve) => {
-          set((state) => {
-            const isFavorite = state.favoriteProduct.some(
-              (item) => item._id === product._id
+        return new Promise((resolve) => { // promise indicates async operation
+          set((state) => { // to update the state (updating the favorite product array)
+            console.log(state)
+            const isFavorite = state.favoriteProduct.some( 
+              (item) => item._id === product._id // checking if the product is in the favorite list using the some method
             );
             return {
               favoriteProduct: isFavorite ? state.favoriteProduct.filter( (item) => item._id !== product._id ) : [...state.favoriteProduct, { ...product }],
+              // if pdt is in the list the filter method creates a new array without the pdt, if pdt is not in the list the the spread operator creates a copy of the current favoritepdt array while the ...product adds the new pdt to the copied array
             };
           });
           resolve();

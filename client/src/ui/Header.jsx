@@ -136,7 +136,15 @@ const Header = () => {
         {/* Icons beside the search box */}
         <div className="flex items-center md:gap-x-6 gap-x-2 text-2xl">
           <Link to={'/profile'}>
-            <FiUser className="hover:text-skyText duration-200 cursor-pointer" />
+            {currentUser ? (
+                <img
+                  src={currentUser?.avatar}
+                  alt="profileImg"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              ) : (
+                <FiUser className="hover:text-skyText duration-200 cursor-pointer" />
+              )}
           </Link>
           <Link to={'/favorite'} className="relative block">
             <FiStar className="hover:text-skyText duration-200 cursor-pointer" />

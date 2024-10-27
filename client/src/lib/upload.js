@@ -8,7 +8,8 @@ const upload = async(file) => { // assessing database on firebase
   const storageRef = ref(storage, `images/${date + file.name}`);
   const uploadTask = uploadBytesResumable(storageRef, file);
 
-  return new Promise(resolve, reject => {
+
+  return new Promise((resolve, reject) => {
     uploadTask.on('state_changed', (snapshot) => {
       const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
       console.log("upload is " + progress + "% done");

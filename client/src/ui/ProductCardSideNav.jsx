@@ -23,7 +23,7 @@ const ProductCardSideNav = ({ product }) => {
     }
   };
   useEffect(() => {
-    const availableItem = favoriteProduct.find((item) => item._id === product._id)
+    const availableItem = favoriteProduct.find((item) => item._id === product._id) // checking if the products in favorite if ... equal to ... then saving in a constant
     setExistingProduct(availableItem || null)
   }, [product, favoriteProduct]) // when ever we change the data or the favourite item
 
