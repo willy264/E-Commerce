@@ -3,7 +3,7 @@ const checkConfig=(server) => {
   switch (server) {
     case 'production':
       config = {
-        baseUrl: "",
+        baseUrl: "https://e-commerce-eight-theta-27.vercel.app",
       };
       break;
     case "local":
