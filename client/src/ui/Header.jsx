@@ -7,7 +7,7 @@ import {
   Transition,
 } from "@headlessui/react";1
 
-import { logo } from "../assets";
+import { eLogo, logo } from "../assets";
 import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { FiShoppingBag, FiStar, FiUser } from "react-icons/fi";
 import { FaChevronDown } from "react-icons/fa";
@@ -84,7 +84,7 @@ const Header = () => {
       <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0 md:gap-6 gap-2">
         {/* Logo */}
         <Link to={"/"}>
-          <img src={logo} alt="logo" className="w-44" />
+          <img src={eLogo} alt="logo" className="w-28" />
         </Link>
 
         {/* SearchBar */}

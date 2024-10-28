@@ -8,6 +8,7 @@ const CheckoutBtn = ({ products }) => {
   // const stripePromise = loadStripe(publishableKey);
 
   const handleCheckout = async () => {
+    console.log(products)
     const stripe = await stripePromise;
     const response = await fetch(`${config.baseUrl}/checkout`, {
       method: "POST",

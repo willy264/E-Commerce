@@ -29,6 +29,22 @@ const Registration = () => {
     }
   };
 
+  
+  const handleUpload = async (res) => {
+    try {
+       let imageUrl = null;
+      if (avatar && avatar.file) {
+        imageUrl = await upload(avatar.file);
+      }
+
+      await setDoc(doc(db, "users", res.user.uid), { //saving the gotten data from the user on firebase and localstorage
+        avatar: imageUrl,
+      });
+    } catch (error) {
+      console.error('error', error)
+    }
+  }
+
   const handleRegistration = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -39,16 +55,16 @@ const Registration = () => {
     try {
       setLoading(true);
       const res = await createUserWithEmailAndPassword(auth, email, password);
-      let imageUrl = null;
-      if (avatar && avatar.file) {
-        imageUrl = await upload(avatar.file);
-      }
+      // let imageUrl = null;
+      // if (avatar && avatar.file) {
+      //   imageUrl = await upload(avatar.file);
+      // }
 
       await setDoc(doc(db, "users", res.user.uid), { //saving the gotten data from the user on firebase and localstorage
         firstName,
         lastName,
         email,
-        avatar: imageUrl,
+        // avatar: imageUrl,
         id: res.user.uid,
       });
       setLogin(true);
@@ -76,6 +92,7 @@ const Registration = () => {
     } finally {
       setLoading(false);
     }
+    handleUpload(res)
   };
 
   return (
@@ -185,6 +202,12 @@ const Registration = () => {
                           <p className="text-xs leading-5 text-gray-400">
                             PNG, JPG, GIF up to 10MB
                           </p>
+
+                          <span 
+                            onClick={handleUpload}
+                          >
+                            Upload the image
+                          </span>
 
                         </div>
                       </div>
