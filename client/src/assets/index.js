@@ -1,5 +1,5 @@
 import logo from "./logo.webp";
-import eLogo from "./ecommerce_logo.png"
+import eLogo from "./pngtree-shopping-logo-design-image_545854-removebg-preview1.png"
 import discountImgOne from "./discountImgOne.png";
 import discountImgTwo from "./discountImgTwo.webp";
 import homeIcon from "./footerIcons/homeIcon.webp";

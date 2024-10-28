@@ -84,7 +84,7 @@ const Header = () => {
       <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0 md:gap-6 gap-2">
         {/* Logo */}
         <Link to={"/"}>
-          <img src={eLogo} alt="logo" className="w-28" />
+          <img src={eLogo} alt="logo" className="w-20" />
         </Link>
 
         {/* SearchBar */}
