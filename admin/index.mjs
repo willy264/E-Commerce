@@ -17,9 +17,11 @@ const routesPath = path.resolve(__dirname, './routes') //connecting to the route
 // console.log('route', routesPath)
 const routeFiles = readdirSync(routesPath) //accessing the routes parameter
 // console.log(routeFiles)
-routeFiles.map(async(file) => { //mapping through the routes parameter in the array
+routeFiles.map(async(file) => { //mapping through the routes parameter in the array and pushing all the routes automatically so no need to
   const routeModule = await import(`./routes/${file}`)
   app.use('/', routeModule.default)
+  // console.log(routeModule);
+  
 })
 
 app.get('/', (req, res) => {

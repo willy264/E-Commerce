@@ -12,7 +12,7 @@ const CheckoutBtn = ({ products }) => {
     const stripe = await stripePromise;
     console.log('stripe', stripe);
     
-    const response = await fetch(`${config.baseUrl}/checkout`, {
+    const response = await fetch(`${config?.baseUrl}/checkout`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,6 +22,7 @@ const CheckoutBtn = ({ products }) => {
         email: currentUser.email,
       }),
     });
+    console.log('response', response)
     const checkoutSession = await response.json();
     console.log('checkoutSession', checkoutSession);
     
