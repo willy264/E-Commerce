@@ -39,6 +39,8 @@ const Registration = () => {
     const { firstName, lastName, email, password } = Object.fromEntries(formData);
 
     try {
+      setLoading(true);
+
       const res = await createUserWithEmailAndPassword(auth, email, password);
       let imageUrl = null;
       if (avatar && avatar.file) {
