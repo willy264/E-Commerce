@@ -13,7 +13,7 @@ const checkConfig=(server) => {
       break;
       default: 
         break;
-  }
+  } 
   return config
 } // checking the configuration
 

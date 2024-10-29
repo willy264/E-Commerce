@@ -84,7 +84,7 @@ const Header = () => {
       <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0 md:gap-6 gap-2">
         {/* Logo */}
         <Link to={"/"}>
-          <img src={eLogo} alt="logo" className="w-20" />
+          <img src={eLogo} alt="logo" className="w-20 md:w-16" />
         </Link>
 
         {/* SearchBar */}
@@ -136,7 +136,7 @@ const Header = () => {
         {/* Icons beside the search box */}
         <div className="flex items-center md:gap-x-6 gap-x-2 text-2xl">
           <Link to={'/profile'}>
-            {currentUser ? (
+            {currentUser ? ( // setting the user's image if one was uploaded
                 <img
                   src={currentUser?.avatar}
                   alt="profileImg"

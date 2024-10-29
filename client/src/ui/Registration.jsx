@@ -18,6 +18,8 @@ const Registration = () => {
     file: null,
     url: "",
   });
+  const [uploadProgress, setUploadProgress] = useState(0);
+
 
   
   const handleAvatar = (e) => {
@@ -29,22 +31,6 @@ const Registration = () => {
     }
   };
 
-  
-  const handleUpload = async (res) => {
-    try {
-       let imageUrl = null;
-      if (avatar && avatar.file) {
-        imageUrl = await upload(avatar.file);
-      }
-
-      await setDoc(doc(db, "users", res.user.uid), { //saving the gotten data from the user on firebase and localstorage
-        avatar: imageUrl,
-      });
-    } catch (error) {
-      console.error('error', error)
-    }
-  }
-
   const handleRegistration = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -53,18 +39,24 @@ const Registration = () => {
     const { firstName, lastName, email, password } = Object.fromEntries(formData);
 
     try {
-      setLoading(true);
       const res = await createUserWithEmailAndPassword(auth, email, password);
-      // let imageUrl = null;
-      // if (avatar && avatar.file) {
-      //   imageUrl = await upload(avatar.file);
-      // }
+      let imageUrl = null;
+      if (avatar && avatar.file) {
+        imageUrl = await upload(avatar.file, (progress) => { 
+          setUploadProgress(progress)
+        });      
+                // OR
+          // const onProgress = (progress) => {// passing the onProgress callback to the upload function. When the progress updates, the setUploadProgress function is called to update the state. The onProgress function is a callback function, and it's a function that is passed as an argument to another function.
+          //   setUploadProgress(progress);
+          // }; 
+          // imageUrl = await upload(avatar.file, onProgress)
+      }
 
       await setDoc(doc(db, "users", res.user.uid), { //saving the gotten data from the user on firebase and localstorage
         firstName,
         lastName,
         email,
-        // avatar: imageUrl,
+        avatar: imageUrl,
         id: res.user.uid,
       });
       setLogin(true);
@@ -92,7 +84,6 @@ const Registration = () => {
     } finally {
       setLoading(false);
     }
-    handleUpload(res)
   };
 
   return (
@@ -202,12 +193,13 @@ const Registration = () => {
                           <p className="text-xs leading-5 text-gray-400">
                             PNG, JPG, GIF up to 10MB
                           </p>
-
-                          <span 
-                            onClick={handleUpload}
-                          >
-                            Upload the image
-                          </span>
+                          
+                          <div className=" mt-3 flex justify-center items-center gap-3">
+                            <div className="progress-bar bg-red-300 rounded-3xl overflow-hidden w-52 relative">
+                              <div className="progress-bar-fill bg-green-500 h-6 flex items-center justify-center" style={{ width: `${uploadProgress}%` }} />
+                              <span className="absolute top-0 left-[90px]">{uploadProgress}%</span>
+                            </div>                            
+                          </div>
 
                         </div>
                       </div>

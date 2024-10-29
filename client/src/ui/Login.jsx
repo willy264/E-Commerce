@@ -33,7 +33,6 @@ const Login = ({ setLogin }) => {
         case "auth/invalid-credential":
           errorMessage = "Email or Password not matched";
           break;
-        // Add more cases as needed
         default:
           errorMessage = "An error occurred. Please try again.";
       }
