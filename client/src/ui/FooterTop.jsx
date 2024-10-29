@@ -6,21 +6,21 @@ const FooterTop = () => {
     {
       name: "Free shipping",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce/icons/icon-shipping-simple.svg",
+        "https://th.bing.com/th/id/OIP.JRoPeaaqy7LPFA5xqhbzHgHaIs?rs=1&pid=ImgDetMain",
       description:
         "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
     },
     {
       name: "10-year warranty",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg",
+        "https://th.bing.com/th/id/OIF.qO7ANqoAFLyY0tqxdW7sfQ?rs=1&pid=ImgDetMain",
       description:
         "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
     },
     {
       name: "Exchanges",
       imageSrc:
-        "https://tailwindui.com/img/ecommerce/icons/icon-exchange-simple.svg",
+        "https://th.bing.com/th/id/OIP.6_CnsBg5IhStNt1hfLazXwHaE8?rs=1&pid=ImgDetMain",
       description:
         "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
     },
