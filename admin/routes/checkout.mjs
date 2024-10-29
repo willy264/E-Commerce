@@ -31,9 +31,9 @@ router.post("/checkout", async (req, res) => {
       payment_method_types: ["card"],
       line_items: extractingItems,
       mode: "payment",
-      success_url:'http://localhost:5173/success?session_id={CHECKOUT_SESSION_ID}',
+      success_url:'https://e-commerce-2kdi.vercel.app/success?session_id={CHECKOUT_SESSION_ID}',
     //     "http://localhost:5173/success?session_id={CHECKOUT_SESSION_ID}",
-      cancel_url: "http://localhost:5173/cancel",
+      cancel_url: "https://e-commerce-2kdi.vercel.app/cancel",
       metadata: {
         email,
       },
