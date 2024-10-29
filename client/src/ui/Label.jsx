@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Label = ({ title, htmlFor }) => {
   return (
     <label 
