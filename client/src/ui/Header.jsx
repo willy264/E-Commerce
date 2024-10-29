@@ -206,7 +206,7 @@ const Header = () => {
             bottomNavigation.map(({title, link}) => (
               <Link to={link} key={title} className="uppercase md:inline-flex font-semibold text-whiteText/90 duration-200 relative overflow-hidden group text-2xl text-gray-500 hover:text-blue-500">
                {title}
-               <span className="inline-flex w-full h-[1px] bg-whiteText absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300 mt-10" />
+               <span className="inline-flex w-full h-[1px] bg-whiteText absolute bottom-0 left-0 transform -translate-x-[105%] group-hover:translate-x-0 duration-300 mt-32" />
               </Link>
             ))
           }
