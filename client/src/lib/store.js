@@ -1,11 +1,11 @@
-// read doc
+// read doc (zustand)
 
 import { doc, getDoc } from "firebase/firestore";
 import { create } from "zustand";
 import { persist } from "zustand/middleware"; // save properties in real state, and used to getting the localstorage in browser where the firebase backend is
 import { db } from "./firebase";
 
-const customStorage = {
+const customStorage = { // custom storage(for handling the localstorage) is a function that returns an object
   getItem: (name) => { // getting item
     const item = localStorage.getItem(name);
     return item ? JSON.parse(item) : null;
@@ -17,17 +17,18 @@ const customStorage = {
     localStorage.removeItem(name);
   },
 };
-export const store = create()(
+
+export const store = create()( // create(creating a store) is a function that returns a function
 
   persist(
-    (set) => ({ // all default
+    (set) => ({ // all default(main state properties)
       currentUser: null,
       isLoading: true,
       cartProduct: [],
       favoriteProduct:  [],
 
       
-      getUserInfo: async (uid) => {
+      getUserInfo: async (uid) => { // getting user info
         if (!uid) return set({ currentUser: null, isLoading: false }); // not finding user
 
         const docRef = doc(db, "users", uid); // getting document reference, in firebase
